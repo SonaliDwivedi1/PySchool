@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Announcements | Einstein Public School</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f8fafc;
+        color: #333;
+    }
+
+    nav {
+        background-color: #12355b;
+        padding: 18px 7%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 25px;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .nav-links a:hover {
+        color: #f4c542;
+    }
+
+
+    .hero {
+        background-color: #12355b;
+        color: white;
+        text-align: center;
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 19px;
+    }
+
+
+    .announcements {
+        max-width: 900px;
+        margin: auto;
+        padding: 60px 25px;
+    }
+
+
+    .announcement {
+        background-color: white;
+
+        padding: 30px;
+
+        margin-bottom: 25px;
+
+        border-radius: 12px;
+
+        box-shadow:
+            0 5px 20px rgba(0, 0, 0, 0.08);
+
+        border-left: 5px solid #f4c542;
+    }
+
+
+    .announcement h2 {
+        color: #12355b;
+        margin-top: 0;
+    }
+
+
+    .announcement-date {
+        color: #777;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+
+    .announcement-content {
+        line-height: 1.7;
+        font-size: 17px;
+    }
+
+
+    .empty {
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+
+    .empty h2 {
+        color: #12355b;
+    }
+
+
+    .cta {
+        background-color: #12355b;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+
+    .cta-button {
+        display: inline-block;
+
+        margin-top: 15px;
+
+        padding: 14px 30px;
+
+        background-color: #f4c542;
+
+        color: #12355b;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+        border-radius: 30px;
+    }
+
+
+    footer {
+        background-color: #0b233d;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    footer p {
+        margin: 8px 0;
+    }
+
+
+    @media (max-width: 700px) {
+
+        nav {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .nav-links {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        Einstein Public School
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/admissions/home/">
+            Home
+        </a>
+
+        <a href="/admissions/about/">
+            About
+        </a>
+
+        <a href="/admissions/procedure/">
+            Admissions
+        </a>
+
+        <a href="/admissions/scholarships/">
+            Scholarships
+        </a>
+
+        <a href="/admissions/contact/">
+            Contact
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>
+        School Announcements
+    </h1>
+
+    <p>
+        Stay up to date with the latest news and information.
+    </p>
+
+</section>
+
+
+<!-- ANNOUNCEMENTS -->
+
+<section class="announcements">
+
+    {% for announcement in announcements %}
+
+        <article class="announcement">
+
+            <h2>
+                {{ announcement.title }}
+            </h2>
+
+            <div class="announcement-date">
+
+                {{ announcement.date|date:"d F Y" }}
+
+            </div>
+
+            <div class="announcement-content">
+
+                {{ announcement.content|linebreaks }}
+
+            </div>
+
+        </article>
+
+    {% empty %}
+
+        <div class="empty">
+
+            <h2>
+                No announcements at the moment
+            </h2>
+
+            <p>
+                Please check back soon for the latest
+                school updates.
+            </p>
+
+        </div>
+
+    {% endfor %}
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>
+        Interested in joining our school?
+    </h2>
+
+    <p>
+        Start your admission application today.
+    </p>
+
+    <a
+        href="/admissions/apply/"
+        class="cta-button">
+
+        Apply Now
+
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        <strong>
+            Einstein Public School
+        </strong>
+    </p>
+
+    <p>
+        Janakpur Dham-9, Dhanusha,
+        Madhesh Province, Nepal
+    </p>
+
+    <p>
+        Phone: 9844510883 | 9817669025
+    </p>
+
+    <p>
+        © 2026 Einstein Public School.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+
+</html>
+
+

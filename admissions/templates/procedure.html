@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admissions | Einstein Public School</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333;
+        background-color: #f8fafc;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+        background-color: #12355b;
+        padding: 18px 7%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #f4c542;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        background:
+            linear-gradient(
+                rgba(18, 53, 91, 0.88),
+                rgba(18, 53, 91, 0.88)
+            ),
+            url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80");
+
+        background-size: cover;
+        background-position: center;
+
+        text-align: center;
+
+        padding: 100px 20px;
+
+        color: white;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        margin: 0 0 15px;
+    }
+
+    .hero p {
+        font-size: 20px;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       INTRODUCTION
+    ========================= */
+
+    .content {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 25px;
+    }
+
+    .intro {
+        text-align: center;
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .intro h2 {
+        color: #12355b;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #555;
+    }
+
+
+    /* =========================
+       ADMISSION STEPS
+    ========================= */
+
+    .steps {
+        margin-top: 70px;
+    }
+
+    .steps > h2 {
+        text-align: center;
+        color: #12355b;
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .step-container {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .step {
+        background-color: white;
+
+        width: 240px;
+
+        padding: 30px 25px;
+
+        border-radius: 15px;
+
+        text-align: center;
+
+        box-shadow:
+            0 5px 20px rgba(0, 0, 0, 0.08);
+
+        transition: 0.3s;
+    }
+
+    .step:hover {
+        transform: translateY(-8px);
+    }
+
+    .step-number {
+        width: 58px;
+        height: 58px;
+
+        margin: auto;
+
+        border-radius: 50%;
+
+        background-color: #f4c542;
+
+        color: #12355b;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 23px;
+        font-weight: bold;
+    }
+
+    .step h3 {
+        color: #12355b;
+        font-size: 21px;
+        margin-top: 20px;
+    }
+
+    .step p {
+        line-height: 1.6;
+        color: #555;
+    }
+
+
+    /* =========================
+       REQUIREMENTS
+    ========================= */
+
+    .requirements {
+        margin-top: 80px;
+
+        background-color: #eef4fb;
+
+        padding: 50px;
+
+        border-radius: 15px;
+    }
+
+    .requirements h2 {
+        color: #12355b;
+
+        text-align: center;
+
+        font-size: 32px;
+
+        margin-top: 0;
+    }
+
+    .requirements ul {
+        max-width: 750px;
+
+        margin: 30px auto;
+
+        padding-left: 25px;
+    }
+
+    .requirements li {
+        margin-bottom: 15px;
+
+        font-size: 17px;
+
+        line-height: 1.6;
+    }
+
+    .requirements-note {
+        text-align: center;
+
+        color: #555;
+
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       APPLY SECTION
+    ========================= */
+
+    .apply-section {
+        margin-top: 60px;
+
+        text-align: center;
+    }
+
+    .apply-section h2 {
+        color: #12355b;
+
+        font-size: 32px;
+
+        margin-bottom: 15px;
+    }
+
+    .apply-section p {
+        font-size: 18px;
+
+        color: #555;
+
+        margin-bottom: 25px;
+    }
+
+    .apply-button {
+        display: inline-block;
+
+        padding: 15px 35px;
+
+        background-color: #12355b;
+
+        color: white;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+        border-radius: 30px;
+
+        transition: 0.3s;
+    }
+
+    .apply-button:hover {
+        background-color: #f4c542;
+
+        color: #12355b;
+
+        transform: translateY(-3px);
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+        background-color: #12355b;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 80px 25px;
+    }
+
+    .cta h2 {
+        font-size: 36px;
+
+        margin-bottom: 15px;
+    }
+
+    .cta p {
+        font-size: 18px;
+
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        display: inline-block;
+
+        padding: 14px 30px;
+
+        background-color: #f4c542;
+
+        color: #12355b;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+        border-radius: 30px;
+
+        transition: 0.3s;
+    }
+
+    .cta-button:hover {
+        background-color: white;
+
+        transform: translateY(-3px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        background-color: #0b233d;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 30px 20px;
+    }
+
+    footer p {
+        margin: 8px 0;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+        nav {
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+        .nav-links {
+            gap: 15px;
+
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+        .requirements {
+            padding: 30px 20px;
+        }
+
+        .intro h2,
+        .steps > h2,
+        .cta h2 {
+            font-size: 30px;
+        }
+
+        .step {
+            width: 100%;
+            max-width: 400px;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ========================= NAVIGATION ========================= -->
+
+<nav>
+
+<div class="logo">
+    Einstein Public School
+</div>
+
+<div class="nav-links">
+
+    <a href="/admissions/home/">
+        Home
+    </a>
+
+    <a href="/admissions/about/">
+        About Us
+    </a>
+
+    <a href="/admissions/procedure/">
+        Admissions
+    </a>
+
+    <a href="/admissions/scholarships/">
+        Scholarships
+    </a>
+
+    <a href="/admissions/announcements/">
+        News
+    </a>
+
+    <a href="/admissions/contact/">
+        Contact
+    </a>
+
+</div>
+
+</nav>
+
+<!-- ========================= HERO ========================= -->
+
+<section class="hero">
+
+<h1>
+    Admissions
+</h1>
+
+<p>
+    Begin your child's journey with Einstein Public School.
+</p>
+
+</section>
+
+<!-- ========================= INTRODUCTION ========================= -->
+
+<section class="content">
+
+<div class="intro">
+
+    <h2>
+        Join Einstein Public School
+    </h2>
+
+    <p>
+        We welcome families who are looking for a supportive,
+        engaging and inspiring learning environment for their
+        children.
+    </p>
+
+    <p>
+        Our admission process is designed to be simple and
+        straightforward. Follow the steps below or contact
+        the school if you need more information.
+    </p>
+
+</div>
+
+
+<!-- =========================
+     ADMISSION PROCESS
+========================= -->
+
+<div class="steps">
+
+    <h2>
+        Admission Process
+    </h2>
+
+
+    <div class="step-container">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <h3>
+                Enquiry
+            </h3>
+
+            <p>
+                Contact the school to learn about available
+                classes, admission requirements and important
+                information.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <h3>
+                Application
+            </h3>
+
+            <p>
+                Complete the admission application form and
+                provide the required information and documents.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <h3>
+                Assessment
+            </h3>
+
+            <p>
+                Depending on the class, students may be asked
+                to participate in an assessment or interaction.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                4
+            </div>
+
+            <h3>
+                Confirmation
+            </h3>
+
+            <p>
+                Successful applicants will receive admission
+                confirmation and further instructions from
+                the school.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     REQUIREMENTS
+========================= -->
+
+<div class="requirements">
+
+    <h2>
+        Admission Requirements
+    </h2>
+
+    <ul>
+
+        <li>
+            Completed admission application form.
+        </li>
+
+        <li>
+            Student's birth certificate.
+        </li>
+
+        <li>
+            Previous school records, where applicable.
+        </li>
+
+        <li>
+            Recent passport-size photographs.
+        </li>
+
+        <li>
+            Parent or guardian identification documents.
+        </li>
+
+        <li>
+            Any additional documents requested by the school.
+        </li>
+
+    </ul>
+
+    <p class="requirements-note">
+        Please contact the school for the exact requirements
+        for your child's class.
+    </p>
+
+</div>
+
+
+<!-- =========================
+     APPLY
+========================= -->
+
+<div class="apply-section">
+
+    <h2>
+        Ready to Apply?
+    </h2>
+
+    <p>
+        Complete our online admission application form.
+    </p>
+
+    <a
+        href="/admissions/apply/"
+        class="apply-button">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+</section>
+
+<!-- ========================= CTA ========================= -->
+
+<section class="cta">
+
+<h2>
+    Have Questions About Admissions?
+</h2>
+
+<p>
+    Our school team will be happy to help you.
+</p>
+
+<a
+    href="/admissions/contact/"
+    class="cta-button">
+
+    Contact the School
+
+</a>
+
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+
+<footer>
+
+<p>
+    <strong>
+        Einstein Public School
+    </strong>
+</p>
+
+<p>
+    Janakpur Dham-9, Dhanusha,
+    Madhesh Province, Nepal
+</p>
+
+<p>
+    Phone: 9844510883 | 9817669025
+</p>
+
+<p>
+    © 2026 Einstein Public School.
+    All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Einstein Public School | Janakpur</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333;
+        background-color: #f8fafc;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+        background-color: #12355b;
+        padding: 18px 7%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #f4c542;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: 600px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 80px 20px;
+
+        background:
+            linear-gradient(
+                rgba(18, 53, 91, 0.88),
+                rgba(18, 53, 91, 0.88)
+            ),
+            url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80");
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-content {
+        max-width: 850px;
+        color: white;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+        color: #f4c542;
+        margin-bottom: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 58px;
+        margin: 0 0 20px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin: 8px 0;
+    }
+
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .hero-button {
+        display: inline-block;
+
+        margin-top: 30px;
+        margin-right: 8px;
+
+        padding: 15px 32px;
+
+        background-color: #f4c542;
+        color: #12355b;
+
+        text-decoration: none;
+        font-weight: bold;
+
+        border-radius: 30px;
+
+        transition: 0.3s;
+    }
+
+    .hero-button:hover {
+        transform: translateY(-3px);
+        background-color: white;
+    }
+
+    .secondary-button {
+        background-color: white;
+        color: #12355b;
+    }
+
+    .secondary-button:hover {
+        background-color: #e5e7eb;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+        max-width: 1100px;
+
+        margin: auto;
+
+        padding: 80px 25px;
+
+        text-align: center;
+    }
+
+    .about h2 {
+        color: #12355b;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .about p {
+        max-width: 800px;
+
+        margin: auto;
+
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       FEATURES
+    ========================= */
+
+    .features {
+        background-color: #eef4fb;
+
+        padding: 80px 25px;
+
+        text-align: center;
+    }
+
+    .features h2 {
+        color: #12355b;
+
+        font-size: 36px;
+
+        margin-bottom: 45px;
+    }
+
+    .cards {
+        max-width: 1100px;
+
+        margin: auto;
+
+        display: flex;
+        justify-content: center;
+
+        gap: 30px;
+
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background-color: white;
+
+        width: 300px;
+
+        padding: 35px 25px;
+
+        border-radius: 15px;
+
+        box-shadow:
+            0 5px 20px rgba(0, 0, 0, 0.08);
+
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+    }
+
+    .card-icon {
+        font-size: 45px;
+
+        margin-bottom: 15px;
+    }
+
+    .card h3 {
+        color: #12355b;
+
+        font-size: 22px;
+    }
+
+    .card p {
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       ANNOUNCEMENTS
+    ========================= */
+
+    .announcements {
+        background-color: white;
+
+        padding: 80px 25px;
+
+        text-align: center;
+    }
+
+    .announcements h2 {
+        color: #12355b;
+
+        font-size: 36px;
+
+        margin-bottom: 45px;
+    }
+
+    .announcement-list {
+        max-width: 1100px;
+
+        margin: auto;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 30px;
+
+        flex-wrap: wrap;
+    }
+
+    .announcement-card {
+        background-color: #f8fafc;
+
+        width: 320px;
+
+        padding: 30px;
+
+        border-radius: 12px;
+
+        text-align: left;
+
+        border-left: 5px solid #f4c542;
+
+        box-shadow:
+            0 5px 20px rgba(0, 0, 0, 0.06);
+
+        transition: 0.3s;
+    }
+
+    .announcement-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .announcement-card h3 {
+        color: #12355b;
+
+        font-size: 21px;
+
+        margin-top: 0;
+    }
+
+    .announcement-date {
+        color: #777;
+
+        font-size: 14px;
+    }
+
+    .announcement-card p {
+        line-height: 1.6;
+    }
+
+    .announcement-button {
+        display: inline-block;
+
+        margin-top: 35px;
+
+        padding: 13px 25px;
+
+        background-color: #12355b;
+
+        color: white;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+        border-radius: 25px;
+    }
+
+    .announcement-button:hover {
+        background-color: #0b233d;
+    }
+
+    .no-announcements {
+        padding: 30px;
+    }
+
+    .no-announcements h3 {
+        color: #12355b;
+    }
+
+
+    /* =========================
+       CALL TO ACTION
+    ========================= */
+
+    .cta {
+        background-color: #12355b;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 80px 25px;
+    }
+
+    .cta h2 {
+        font-size: 36px;
+
+        margin-bottom: 15px;
+    }
+
+    .cta p {
+        font-size: 18px;
+
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        display: inline-block;
+
+        padding: 14px 30px;
+
+        background-color: #f4c542;
+
+        color: #12355b;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+        border-radius: 30px;
+    }
+
+    .cta-button:hover {
+        background-color: white;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        background-color: #0b233d;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 30px 20px;
+    }
+
+    footer p {
+        margin: 8px 0;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+        nav {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .nav-links {
+            gap: 15px;
+
+            justify-content: center;
+        }
+
+        .hero {
+            min-height: 550px;
+        }
+
+        .hero-content h1 {
+            font-size: 40px;
+        }
+
+        .hero-content h2 {
+            font-size: 22px;
+        }
+
+        .hero-content p {
+            font-size: 17px;
+        }
+
+        .hero-button {
+            display: block;
+
+            width: 80%;
+
+            margin: 15px auto;
+        }
+
+        .about h2,
+        .features h2,
+        .announcements h2,
+        .cta h2 {
+            font-size: 30px;
+        }
+
+        .announcement-card {
+            width: 100%;
+            max-width: 400px;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ========================= NAVIGATION ========================= -->
+
+<nav>
+
+<div class="logo">
+    Einstein Public School
+</div>
+
+<div class="nav-links">
+
+    <a href="/admissions/home/">
+        Home
+    </a>
+
+    <a href="/admissions/about/">
+        About Us
+    </a>
+
+    <a href="/admissions/procedure/">
+        Admissions
+    </a>
+
+    <a href="/admissions/scholarships/">
+        Scholarships
+    </a>
+
+    <a href="/admissions/announcements/">
+        News
+    </a>
+
+    <a href="/admissions/contact/">
+        Contact
+    </a>
+
+</div>
+
+</nav>
+
+<!-- ========================= HERO ========================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+    <h2>
+        Welcome to
+    </h2>
+
+    <h1>
+        Einstein Public School
+    </h1>
+
+    <p>
+        Janakpur, Dhanusha, Nepal
+    </p>
+
+    <p>
+        Inspiring young minds and building bright futures.
+    </p>
+
+
+    <a
+        href="/admissions/apply/"
+        class="hero-button">
+
+        Apply Now
+
+    </a>
+
+
+    <a
+        href="/admissions/procedure/"
+        class="hero-button secondary-button">
+
+        Admission Procedure
+
+    </a>
+
+</div>
+
+</section>
+
+<!-- ========================= ABOUT ========================= -->
+
+<section class="about">
+
+<h2>
+    Welcome to Our School
+</h2>
+
+<p>
+    Einstein Public School is committed to providing
+    quality education in a supportive and inspiring
+    environment. We encourage curiosity, creativity,
+    confidence and lifelong learning in every student.
+</p>
+
+</section>
+
+<!-- ========================= FEATURES ========================= -->
+
+<section class="features">
+
+<h2>
+    Why Choose Einstein Public School?
+</h2>
+
+
+<div class="cards">
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            🎓
+        </div>
+
+        <h3>
+            Quality Education
+        </h3>
+
+        <p>
+            We provide students with a strong academic
+            foundation and encourage them to reach
+            their full potential.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            👩‍🏫
+        </div>
+
+        <h3>
+            Dedicated Teachers
+        </h3>
+
+        <p>
+            Our teachers create a supportive learning
+            environment where students can grow,
+            learn and succeed.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            🌟
+        </div>
+
+        <h3>
+            Bright Future
+        </h3>
+
+        <p>
+            We help students develop the knowledge,
+            confidence and skills they need for
+            their future.
+        </p>
+
+    </div>
+
+
+</div>
+
+</section>
+
+<!-- ========================= LATEST ANNOUNCEMENTS ========================= -->
+
+<section class="announcements">
+
+<h2>
+    Latest Announcements
+</h2>
+
+
+<div class="announcement-list">
+
+    {% for announcement in latest_announcements %}
+
+        <div class="announcement-card">
+
+            <h3>
+                {{ announcement.title }}
+            </h3>
+
+            <p class="announcement-date">
+                {{ announcement.date|date:"d F Y" }}
+            </p>
+
+            <p>
+                {{ announcement.content|truncatewords:25 }}
+            </p>
+
+        </div>
+
+    {% empty %}
+
+        <div class="no-announcements">
+
+            <h3>
+                No announcements at the moment
+            </h3>
+
+            <p>
+                Please check back soon for the latest
+                school updates.
+            </p>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+
+<a
+    href="/admissions/announcements/"
+    class="announcement-button">
+
+    View All Announcements
+
+</a>
+
+</section>
+
+<!-- ========================= CALL TO ACTION ========================= -->
+
+<section class="cta">
+
+<h2>
+    Ready to Join Einstein Public School?
+</h2>
+
+<p>
+    Start your child's admission application today.
+</p>
+
+
+<a
+    href="/admissions/apply/"
+    class="cta-button">
+
+    Apply Now
+
+</a>
+
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+
+<footer>
+
+<p>
+    <strong>
+        Einstein Public School
+    </strong>
+</p>
+
+<p>
+    Janakpur Dham-9, Dhanusha,
+    Madhesh Province, Nepal
+</p>
+
+<p>
+    Phone: 9844510883 | 9817669025
+</p>
+
+<p>
+    © 2026 Einstein Public School.
+    All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+
+</html>
+

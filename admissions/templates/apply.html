@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apply Now | Einstein Public School</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f8fafc;
+        color: #333;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+        background-color: #12355b;
+        padding: 18px 7%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #f4c542;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        background:
+            linear-gradient(
+                rgba(18, 53, 91, 0.95),
+                rgba(18, 53, 91, 0.95)
+            );
+
+        color: white;
+
+        text-align: center;
+
+        padding: 75px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+
+        margin: 0 0 15px;
+    }
+
+    .hero p {
+        font-size: 19px;
+
+        margin: 0;
+
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       FORM
+    ========================= */
+
+    .form-container {
+        max-width: 850px;
+
+        margin: 60px auto;
+
+        padding: 45px;
+
+        background-color: white;
+
+        border-radius: 15px;
+
+        box-shadow:
+            0 5px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-container h2 {
+        color: #12355b;
+
+        margin-top: 0;
+
+        font-size: 30px;
+
+        margin-bottom: 10px;
+    }
+
+    .form-intro {
+        line-height: 1.7;
+
+        color: #666;
+
+        margin-bottom: 35px;
+    }
+
+
+    /* =========================
+       SUCCESS MESSAGE
+    ========================= */
+
+    .success-message {
+        background-color: #dcfce7;
+
+        color: #166534;
+
+        padding: 16px 20px;
+
+        margin-bottom: 30px;
+
+        border-radius: 8px;
+
+        font-weight: bold;
+
+        border-left: 5px solid #22c55e;
+    }
+
+
+    /* =========================
+       FORM FIELDS
+    ========================= */
+
+    .form-group {
+        margin-bottom: 23px;
+    }
+
+    .form-group label {
+        display: block;
+
+        font-weight: bold;
+
+        color: #12355b;
+
+        margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+
+        padding: 13px 14px;
+
+        border: 1px solid #d1d5db;
+
+        border-radius: 7px;
+
+        font-family: Arial, sans-serif;
+
+        font-size: 15px;
+
+        background-color: white;
+
+        transition: 0.2s;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+
+        resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        outline: none;
+
+        border-color: #12355b;
+
+        box-shadow:
+            0 0 0 3px rgba(18, 53, 91, 0.1);
+    }
+
+
+    /* =========================
+       ERRORS
+    ========================= */
+
+    .error-message {
+        color: #dc2626;
+
+        font-size: 14px;
+
+        margin-top: 6px;
+    }
+
+
+    /* =========================
+       SUBMIT BUTTON
+    ========================= */
+
+    .submit-button {
+        width: 100%;
+
+        padding: 16px;
+
+        background-color: #12355b;
+
+        color: white;
+
+        border: none;
+
+        border-radius: 8px;
+
+        font-size: 17px;
+
+        font-weight: bold;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+    }
+
+    .submit-button:hover {
+        background-color: #0b2948;
+
+        transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        background-color: #0b233d;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 30px 20px;
+    }
+
+    footer p {
+        margin: 8px 0;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+        nav {
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+        .nav-links {
+            gap: 15px;
+
+            justify-content: center;
+        }
+
+        .hero {
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+        .form-container {
+            margin: 30px 15px;
+
+            padding: 25px;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ========================= NAVIGATION ========================= -->
+
+<nav>
+
+<div class="logo">
+    Einstein Public School
+</div>
+
+<div class="nav-links">
+
+    <a href="/admissions/home/">
+        Home
+    </a>
+
+    <a href="/admissions/about/">
+        About Us
+    </a>
+
+    <a href="/admissions/procedure/">
+        Admissions
+    </a>
+
+    <a href="/admissions/scholarships/">
+        Scholarships
+    </a>
+
+    <a href="/admissions/announcements/">
+        News
+    </a>
+
+    <a href="/admissions/contact/">
+        Contact
+    </a>
+
+</div>
+
+</nav>
+
+<!-- ========================= HERO ========================= -->
+
+<section class="hero">
+
+<h1>
+    Apply Now
+</h1>
+
+<p>
+    Begin your child's journey with Einstein Public School.
+</p>
+
+</section>
+
+<!-- ========================= APPLICATION FORM ========================= -->
+
+<div class="form-container">
+
+<h2>
+    Admission Application
+</h2>
+
+<p class="form-intro">
+    Please complete the form below with accurate
+    student and parent or guardian information.
+    Our school will review your application and
+    contact you regarding the next steps.
+</p>
+
+
+{% if request.GET.success %}
+
+    <div class="success-message">
+
+        ✓ Your application has been submitted successfully!
+
+        <br>
+
+        Thank you for applying to Einstein Public School.
+
+    </div>
+
+{% endif %}
+
+
+<form method="POST">
+
+    {% csrf_token %}
+
+
+    <!-- STUDENT NAME -->
+
+    <div class="form-group">
+
+        <label for="{{ form.student_name.id_for_label }}">
+            Student Name
+        </label>
+
+        {{ form.student_name }}
+
+        {% if form.student_name.errors %}
+
+            <div class="error-message">
+                {{ form.student_name.errors }}
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- DATE OF BIRTH -->
+
+    <div class="form-group">
+
+        <label for="{{ form.date_of_birth.id_for_label }}">
+            Date of Birth
+        </label>
+
+        {{ form.date_of_birth }}
+
+        {% if form.date_of_birth.errors %}
+
+            <div class="error-message">
+                {{ form.date_of_birth.errors }}
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- CLASS -->
+
+    <div class="form-group">
+
+        <label for="{{ form.class_applying_for.id_for_label }}">
+            Class Applying For
+        </label>
+
+        {{ form.class_applying_for }}
+
+        {% if form.class_applying_for.errors %}
+
+            <div class="error-message">
+                {{ form.class_applying_for.errors }}
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- PARENT NAME -->
+
+    <div class="form-group">
+
+        <label for="{{ form.parent_name.id_for_label }}">
+            Parent / Guardian Name
+        </label>
+
+        {{ form.parent_name }}
+
+        {% if form.parent_name.errors %}
+
+            <div class="error-message">
+                {{ form.parent_name.errors }}
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- PHONE -->
+
+    <div class="form-group">
+
+        <label for="{{ form.phone.id_for_label }}">
+            Phone Number
+        </label>
+
+        {{ form.phone }}
+
+        {% if form.phone.errors %}
+
+            <div class="error-message">
+                {{ form.phone.errors }}
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- EMAIL -->
+
+    <div class="form-group">
+
+        <label for="{{ form.email.id_for_label }}">
+            Email Address
+        </label>
+
+        {{ form.email }}
+
+        {% if form.email.errors %}
+
+            <div class="error-message">
+                {{ form.email.errors }}
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- ADDRESS -->
+
+    <div class="form-group">
+
+        <label for="{{ form.address.id_for_label }}">
+            Address
+        </label>
+
+        {{ form.address }}
+
+        {% if form.address.errors %}
+
+            <div class="error-message">
+                {{ form.address.errors }}
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- PREVIOUS SCHOOL -->
+
+    <div class="form-group">
+
+        <label for="{{ form.previous_school.id_for_label }}">
+            Previous School
+        </label>
+
+        {{ form.previous_school }}
+
+        {% if form.previous_school.errors %}
+
+            <div class="error-message">
+                {{ form.previous_school.errors }}
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- ADDITIONAL INFORMATION -->
+
+    <div class="form-group">
+
+        <label for="{{ form.message.id_for_label }}">
+            Additional Information
+        </label>
+
+        {{ form.message }}
+
+        {% if form.message.errors %}
+
+            <div class="error-message">
+                {{ form.message.errors }}
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- SUBMIT -->
+
+    <button
+        type="submit"
+        class="submit-button">
+
+        Submit Application
+
+    </button>
+
+</form>
+
+</div>
+
+<!-- ========================= FOOTER ========================= -->
+
+<footer>
+
+<p>
+    <strong>
+        Einstein Public School
+    </strong>
+</p>
+
+<p>
+    Janakpur Dham-9, Dhanusha,
+    Madhesh Province, Nepal
+</p>
+
+<p>
+    Phone: 9844510883 | 9817669025
+</p>
+
+<p>
+    © 2026 Einstein Public School.
+    All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | Einstein Public School</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333;
+        background-color: #f8fafc;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+        background-color: #12355b;
+
+        padding: 18px 7%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        color: white;
+
+        font-size: 24px;
+
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+
+        gap: 25px;
+
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        color: white;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #f4c542;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        background:
+            linear-gradient(
+                rgba(18, 53, 91, 0.88),
+                rgba(18, 53, 91, 0.88)
+            ),
+            url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80");
+
+        background-size: cover;
+
+        background-position: center;
+
+        text-align: center;
+
+        padding: 100px 20px;
+
+        color: white;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+
+        margin: 0 0 15px;
+    }
+
+    .hero p {
+        font-size: 20px;
+
+        margin: 0;
+
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       INTRODUCTION
+    ========================= */
+
+    .intro {
+        max-width: 1050px;
+
+        margin: auto;
+
+        padding: 80px 25px;
+
+        text-align: center;
+    }
+
+    .intro h2 {
+        color: #12355b;
+
+        font-size: 36px;
+
+        margin-bottom: 25px;
+    }
+
+    .intro p {
+        max-width: 850px;
+
+        margin: auto;
+
+        font-size: 18px;
+
+        line-height: 1.8;
+
+        color: #555;
+    }
+
+
+    /* =========================
+       MISSION & VISION
+    ========================= */
+
+    .mission-section {
+        background-color: #eef4fb;
+
+        padding: 80px 25px;
+    }
+
+    .mission-container {
+        max-width: 1100px;
+
+        margin: auto;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 30px;
+
+        flex-wrap: wrap;
+    }
+
+    .mission-card {
+        background-color: white;
+
+        width: 480px;
+
+        padding: 40px 35px;
+
+        border-radius: 15px;
+
+        box-shadow:
+            0 5px 20px rgba(0, 0, 0, 0.07);
+
+        text-align: center;
+    }
+
+    .mission-icon {
+        font-size: 48px;
+
+        margin-bottom: 15px;
+    }
+
+    .mission-card h2 {
+        color: #12355b;
+
+        font-size: 28px;
+
+        margin-bottom: 15px;
+    }
+
+    .mission-card p {
+        line-height: 1.8;
+
+        color: #555;
+    }
+
+
+    /* =========================
+       VALUES
+    ========================= */
+
+    .values-section {
+        padding: 80px 25px;
+
+        text-align: center;
+
+        background-color: white;
+    }
+
+    .values-section h2 {
+        color: #12355b;
+
+        font-size: 36px;
+
+        margin-bottom: 15px;
+    }
+
+    .values-intro {
+        max-width: 700px;
+
+        margin: 0 auto 45px;
+
+        color: #666;
+
+        font-size: 18px;
+
+        line-height: 1.7;
+    }
+
+    .values {
+        max-width: 1100px;
+
+        margin: auto;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 30px;
+
+        flex-wrap: wrap;
+    }
+
+    .value-card {
+        background-color: #f8fafc;
+
+        width: 300px;
+
+        padding: 35px 25px;
+
+        border-radius: 15px;
+
+        text-align: center;
+
+        box-shadow:
+            0 5px 20px rgba(0, 0, 0, 0.06);
+
+        transition: 0.3s;
+    }
+
+    .value-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .value-icon {
+        font-size: 45px;
+
+        margin-bottom: 15px;
+    }
+
+    .value-card h3 {
+        color: #12355b;
+
+        font-size: 22px;
+    }
+
+    .value-card p {
+        line-height: 1.6;
+
+        color: #555;
+    }
+
+
+    /* =========================
+       SCHOOL COMMUNITY
+    ========================= */
+
+    .community {
+        background-color: #eef4fb;
+
+        padding: 80px 25px;
+
+        text-align: center;
+    }
+
+    .community h2 {
+        color: #12355b;
+
+        font-size: 36px;
+
+        margin-bottom: 20px;
+    }
+
+    .community p {
+        max-width: 800px;
+
+        margin: auto;
+
+        font-size: 18px;
+
+        line-height: 1.8;
+
+        color: #555;
+    }
+
+
+    /* =========================
+       CALL TO ACTION
+    ========================= */
+
+    .cta {
+        background-color: #12355b;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 80px 25px;
+    }
+
+    .cta h2 {
+        font-size: 36px;
+
+        margin-bottom: 15px;
+    }
+
+    .cta p {
+        font-size: 18px;
+
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        display: inline-block;
+
+        padding: 14px 30px;
+
+        background-color: #f4c542;
+
+        color: #12355b;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+        border-radius: 30px;
+
+        transition: 0.3s;
+    }
+
+    .cta-button:hover {
+        background-color: white;
+
+        transform: translateY(-3px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        background-color: #0b233d;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 30px 20px;
+    }
+
+    footer p {
+        margin: 8px 0;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+        nav {
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+        .nav-links {
+            gap: 15px;
+
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+        .intro h2,
+        .values-section h2,
+        .community h2,
+        .cta h2 {
+            font-size: 30px;
+        }
+
+        .mission-card,
+        .value-card {
+            width: 100%;
+
+            max-width: 450px;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ========================= NAVIGATION ========================= -->
+
+<nav>
+
+<div class="logo">
+    Einstein Public School
+</div>
+
+<div class="nav-links">
+
+    <a href="/admissions/home/">
+        Home
+    </a>
+
+    <a href="/admissions/about/">
+        About Us
+    </a>
+
+    <a href="/admissions/procedure/">
+        Admissions
+    </a>
+
+    <a href="/admissions/scholarships/">
+        Scholarships
+    </a>
+
+    <a href="/admissions/announcements/">
+        News
+    </a>
+
+    <a href="/admissions/contact/">
+        Contact
+    </a>
+
+</div>
+
+</nav>
+
+<!-- ========================= HERO ========================= -->
+
+<section class="hero">
+
+<h1>
+    About Us
+</h1>
+
+<p>
+    Building knowledge, character and confidence.
+</p>
+
+</section>
+
+<!-- ========================= WHO WE ARE ========================= -->
+
+<section class="intro">
+
+<h2>
+    Who We Are
+</h2>
+
+<p>
+    Einstein Public School is committed to providing
+    students with a supportive, inspiring and inclusive
+    learning environment. We believe education is about
+    more than academic achievement. It is about helping
+    young people develop confidence, character, curiosity
+    and the skills they need to succeed in life.
+</p>
+
+</section>
+
+<!-- ========================= MISSION & VISION ========================= -->
+
+<section class="mission-section">
+
+<div class="mission-container">
+
+
+    <div class="mission-card">
+
+        <div class="mission-icon">
+            🎯
+        </div>
+
+        <h2>
+            Our Mission
+        </h2>
+
+        <p>
+            Our mission is to provide quality education
+            while encouraging curiosity, creativity,
+            discipline, respect and a love for learning.
+            We aim to help every student discover their
+            strengths and reach their full potential.
+        </p>
+
+    </div>
+
+
+    <div class="mission-card">
+
+        <div class="mission-icon">
+            🌟
+        </div>
+
+        <h2>
+            Our Vision
+        </h2>
+
+        <p>
+            Our vision is to develop confident, responsible
+            and capable young people who are prepared to
+            contribute positively to their families,
+            communities and the wider world.
+        </p>
+
+    </div>
+
+
+</div>
+
+</section>
+
+<!-- ========================= VALUES ========================= -->
+
+<section class="values-section">
+
+<h2>
+    Our Core Values
+</h2>
+
+<p class="values-intro">
+    These values guide the way we teach, learn and
+    build relationships within our school community.
+</p>
+
+
+<div class="values">
+
+
+    <!-- EXCELLENCE -->
+
+    <div class="value-card">
+
+        <div class="value-icon">
+            🎓
+        </div>
+
+        <h3>
+            Excellence
+        </h3>
+
+        <p>
+            We encourage students to set high standards
+            and always strive to do their best.
+        </p>
+
+    </div>
+
+
+    <!-- INTEGRITY -->
+
+    <div class="value-card">
+
+        <div class="value-icon">
+            🤝
+        </div>
+
+        <h3>
+            Integrity
+        </h3>
+
+        <p>
+            We promote honesty, responsibility, kindness
+            and respect in everything we do.
+        </p>
+
+    </div>
+
+
+    <!-- GROWTH -->
+
+    <div class="value-card">
+
+        <div class="value-icon">
+            🌱
+        </div>
+
+        <h3>
+            Growth
+        </h3>
+
+        <p>
+            We encourage students to learn, explore,
+            ask questions and continuously improve.
+        </p>
+
+    </div>
+
+
+</div>
+
+</section>
+
+<!-- ========================= SCHOOL COMMUNITY ========================= -->
+
+<section class="community">
+
+<h2>
+    Our School Community
+</h2>
+
+<p>
+    At Einstein Public School, we believe that students
+    learn best when they feel supported and encouraged.
+    We value strong relationships between students,
+    teachers and families and work together to create
+    a positive environment where every student can grow.
+</p>
+
+</section>
+
+<!-- ========================= CALL TO ACTION ========================= -->
+
+<section class="cta">
+
+<h2>
+    Interested in Joining Our School?
+</h2>
+
+<p>
+    Learn more about our admission process and
+    take the next step towards joining Einstein
+    Public School.
+</p>
+
+<a
+    href="/admissions/procedure/"
+    class="cta-button">
+
+    View Admissions
+
+</a>
+
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+
+<footer>
+
+<p>
+    <strong>
+        Einstein Public School
+    </strong>
+</p>
+
+<p>
+    Janakpur Dham-9, Dhanusha,
+    Madhesh Province, Nepal
+</p>
+
+<p>
+    Phone: 9844510883 | 9817669025
+</p>
+
+<p>
+    © 2026 Einstein Public School.
+    All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+
+</html>
+
