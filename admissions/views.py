@@ -29,6 +29,9 @@ def procedure(request):
 def about(request):
     return render(request, 'about.html')
 
+def founder_message(request):
+    return render(request, 'founder-message.html')
+
 
 def contact(request):
 

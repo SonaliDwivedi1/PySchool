@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+{% load static %}
+
 <html lang="en">
 
 <head>
@@ -178,6 +180,104 @@
 
 
     /* =========================
+       FOUNDER
+    ========================= */
+
+    .founder {
+        background-color: white;
+
+        padding: 80px 25px;
+    }
+
+    .founder-container {
+        max-width: 1100px;
+
+        margin: auto;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 60px;
+    }
+
+    .founder-image {
+        flex: 1;
+
+        text-align: center;
+    }
+
+    .founder-image img {
+        width: 100%;
+
+        max-width: 380px;
+
+        height: 450px;
+
+        object-fit: cover;
+
+        border-radius: 15px;
+
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .founder-content {
+        flex: 1;
+    }
+
+    .founder-content h2 {
+        color: #12355b;
+
+        font-size: 36px;
+
+        margin-bottom: 15px;
+    }
+
+    .founder-content h3 {
+        color: #f4c542;
+
+        font-size: 24px;
+
+        margin-bottom: 25px;
+    }
+
+    .founder-content p {
+        font-size: 17px;
+
+        line-height: 1.8;
+
+        margin-bottom: 15px;
+    }
+
+    .founder-button {
+        display: inline-block;
+
+        margin-top: 15px;
+
+        padding: 13px 28px;
+
+        background-color: #12355b;
+
+        color: white;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+        border-radius: 25px;
+
+        transition: 0.3s;
+    }
+
+    .founder-button:hover {
+        background-color: #f4c542;
+
+        color: #12355b;
+    }
+
+
+    /* =========================
        FEATURES
     ========================= */
 
@@ -203,6 +303,7 @@
         margin: auto;
 
         display: flex;
+
         justify-content: center;
 
         gap: 30px;
@@ -426,6 +527,7 @@
 
         nav {
             flex-direction: column;
+
             gap: 15px;
         }
 
@@ -468,7 +570,29 @@
 
         .announcement-card {
             width: 100%;
+
             max-width: 400px;
+        }
+
+
+        /* FOUNDER MOBILE */
+
+        .founder-container {
+            flex-direction: column;
+
+            gap: 35px;
+        }
+
+        .founder-image img {
+            height: 400px;
+        }
+
+        .founder-content {
+            text-align: center;
+        }
+
+        .founder-content h2 {
+            font-size: 30px;
         }
 
     }
@@ -477,7 +601,9 @@
 
 </head>
 
+
 <body>
+
 
 <!-- ========================= NAVIGATION ========================= -->
 
@@ -516,6 +642,7 @@
 </div>
 
 </nav>
+
 
 <!-- ========================= HERO ========================= -->
 
@@ -561,6 +688,7 @@
 
 </section>
 
+
 <!-- ========================= ABOUT ========================= -->
 
 <section class="about">
@@ -577,6 +705,62 @@
 </p>
 
 </section>
+
+
+<!-- ========================= FOUNDER ========================= -->
+
+<section class="founder">
+
+<div class="founder-container">
+
+
+    <div class="founder-image">
+
+        <img
+            src="{% static 'images/founder.jpg' %}"
+            alt="Premlata Kumari, Founder and Director of Einstein Public School">
+
+    </div>
+
+
+    <div class="founder-content">
+
+        <h2>
+            A Message from Our Founder & Director
+        </h2>
+
+        <h3>
+            Premlata Kumari
+        </h3>
+
+        <p>
+            At Einstein Public School, we believe that education
+            is not simply about academic achievement. It is about
+            nurturing confident, disciplined and compassionate
+            individuals who are prepared to make a positive
+            difference in the world.
+        </p>
+
+        <p>
+            Our vision is to provide every child with an environment
+            where academic excellence, strong values, creativity,
+            discipline and character development come together.
+        </p>
+
+        <a
+            href="/admissions/founder-message/"
+            class="founder-button">
+
+            Read More
+
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
 
 <!-- ========================= FEATURES ========================= -->
 
@@ -651,6 +835,7 @@
 
 </section>
 
+
 <!-- ========================= LATEST ANNOUNCEMENTS ========================= -->
 
 <section class="announcements">
@@ -710,6 +895,7 @@
 
 </section>
 
+
 <!-- ========================= CALL TO ACTION ========================= -->
 
 <section class="cta">
@@ -732,6 +918,7 @@
 </a>
 
 </section>
+
 
 <!-- ========================= FOOTER ========================= -->
 
@@ -759,7 +946,10 @@
 
 </footer>
 
+
 </body>
 
 </html>
+
+
 
