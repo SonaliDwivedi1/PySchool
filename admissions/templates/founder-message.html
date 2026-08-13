@@ -2,13 +2,16 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Founder’s Message | Einstein Public School</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -20,6 +23,48 @@
             color: #333;
         }
 
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background-color: #12355b;
+            padding: 18px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f4c542;
+        }
+
+
+        /* =========================
+           FOUNDER SECTION
+        ========================= */
+
         .container {
             max-width: 1100px;
             margin: 60px auto;
@@ -30,7 +75,10 @@
             background: white;
             border-radius: 15px;
             padding: 40px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+            box-shadow:
+                0 5px 25px rgba(0, 0, 0, 0.08);
+
             display: flex;
             gap: 45px;
             align-items: center;
@@ -39,8 +87,13 @@
         .founder-image {
             width: 320px;
             height: 400px;
+
             object-fit: cover;
+
             border-radius: 12px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.12);
         }
 
         .content {
@@ -67,36 +120,144 @@
 
         .signature {
             margin-top: 30px;
+
             font-weight: bold;
+
             color: #123c69;
+
             font-size: 18px;
         }
 
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #0b233d;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
         @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                justify-content: center;
+            }
+
+            .container {
+                margin: 30px auto;
+                padding: 15px;
+            }
+
             .founder-card {
                 flex-direction: column;
+
                 text-align: center;
+
                 padding: 25px;
             }
 
             .founder-image {
                 width: 100%;
+
                 max-width: 320px;
+
                 height: 380px;
             }
 
             h1 {
                 font-size: 30px;
             }
+
+            h2 {
+                font-size: 19px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        Einstein Public School
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/admissions/about/">
+            About Us
+        </a>
+
+        <a href="/admissions/procedure/">
+            Admissions
+        </a>
+
+        <a href="/admissions/scholarships/">
+            Scholarships
+        </a>
+
+        <a href="/admissions/announcements/">
+            News
+        </a>
+
+        <a href="/admissions/contact/">
+            Contact
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     FOUNDER MESSAGE
+========================= -->
 
 <div class="container">
 
     <div class="founder-card">
+
 
         <img
             src="{% static 'admissions/founder.jpg' %}"
@@ -104,15 +265,24 @@
             class="founder-image"
         >
 
+
         <div class="content">
 
-            <h1>Founder’s Message</h1>
+            <h1>
+                Founder’s Message
+            </h1>
 
-            <h2>Premlata Kumari<br>Founder & Director</h2>
+
+            <h2>
+                Premlata Kumari<br>
+                Founder & Director
+            </h2>
+
 
             <p>
                 Welcome to Einstein Public School, Janakpur.
             </p>
+
 
             <p>
                 At Einstein Public School, we believe that education is not
@@ -121,11 +291,13 @@
                 who are prepared to make a positive contribution to society.
             </p>
 
+
             <p>
                 Our vision is to provide every child with a supportive and
                 inspiring environment where curiosity, creativity, discipline
                 and strong values can flourish.
             </p>
+
 
             <p>
                 We are committed to providing quality education while helping
@@ -133,16 +305,23 @@
                 need to succeed in an ever-changing world.
             </p>
 
+
             <p>
                 I warmly welcome you to our school community and look forward
                 to seeing our students grow, learn and achieve their dreams.
             </p>
 
+
             <div class="signature">
+
                 Premlata Kumari<br>
+
                 Founder & Director<br>
+
                 Einstein Public School
+
             </div>
+
 
         </div>
 
@@ -150,12 +329,37 @@
 
 </div>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        <strong>
+            Einstein Public School
+        </strong>
+    </p>
+
+    <p>
+        Janakpur Dham-9, Dhanusha,
+        Madhesh Province, Nepal
+    </p>
+
+    <p>
+        Phone: 9844510883 | 9817669025
+    </p>
+
+    <p>
+        © 2026 Einstein Public School.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
 </body>
+
 </html>
-
-
-
-
-
-
 
